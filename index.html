@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Calculadora de propinas</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!--[if lt IE 9]>
+    <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+	<div id = "container">
+		<h1>Calculadora de propina</h1>
+		<div id = "calculadora">
+			<form>
+				<label>
+					¿Cuánto fue la cuenta?<br>
+					$ <input type="text" id="monto">
+				</label>
+				<label>
+					¿Cómo estuvo el servicio?
+					<select id="calidad">
+						<option disabled selected value="0">-- Escoge una opción --</option>
+						<option value="0.3">30% - Magnífico</option>
+						<option value="0.2">20% - Bueno</option>
+						<option value="0.15">15% - Regular</option>
+						<option value="0.1">10% -Malo</option>
+						<option value="0.05">5% -Terrible</option>
+					</select>
+				</label>
+				<label>
+					¿Cuántas personas comparten la cuenta?<br>
+					<input type ="text" id="totalPersonas">Personas
+				</label>
+				<button type="button" id="calcular">Calcular</button>
+			</form>
+		</div><!--Calculadora-->
+		<div id="cuentaTotal">
+			<sup>$</sup><span id="propina">0.00</span>
+			<small id="each">Cada uno</small>
+		</div>
+	</div><!--Container-->
+
+<script src="js/calculadora.js"></script>
+</body>
+</html>
